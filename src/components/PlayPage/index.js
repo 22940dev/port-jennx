@@ -3,8 +3,8 @@ import NavigationBar from '../NavigationBar';
 import { NavLink } from 'react-router-dom';
 import { css } from 'emotion';
 import { buildPageSpacing, spacing, fontStyles, colors } from '../../styles';
-import ami from './images/Ami_komura.jpg'
-import Carousel from 'react-bootstrap/Carousel'
+import ami from './images/art/Ami_komura.jpg';
+import Carousel from 'react-bootstrap/Carousel';
 import Row from 'react-bootstrap/Row';
 import Container from 'react-bootstrap/Container';
 
@@ -42,6 +42,7 @@ function PlayPage(props) {
       `,
     header: css`
         font-family: Roboto Mono;
+        font-size: x-large;
         margin-top: 10%;
         left: 0px;
         text-align: left;
@@ -66,7 +67,7 @@ function PlayPage(props) {
     description: css `
       font-family: Lato;
       color: ${colors.black};
-      font-size: medium; 
+      font-size: large; 
       text-align: left;     
   `,
     top: css `
@@ -111,8 +112,8 @@ function PlayPage(props) {
               
             </Carousel>
           </Row>
+          </Container>
           <p className={styles.header}> <span className={styles.spanred}> Dance </span></p>
-        </Container>
         </div>
     </div>
   )

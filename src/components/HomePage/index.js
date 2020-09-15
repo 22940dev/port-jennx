@@ -3,8 +3,10 @@ import NavigationBar from '../NavigationBar';
 import { NavLink } from 'react-router-dom';
 import { css } from 'emotion';
 import { buildPageSpacing, spacing, fontStyles, colors } from '../../styles';
-import RobotoMono from 'typeface-roboto-mono';
-import Lato from 'typeface-lato';
+import Row from 'react-bootstrap/Row';
+import Col from 'react-bootstrap/Col';
+import Container from 'react-bootstrap/Container';
+import Image from 'react-bootstrap/Image';
 import useDimensions from "react-cool-dimensions";
  
 function HomePage(props) {
@@ -40,6 +42,14 @@ function HomePage(props) {
             flex: 1;
             margin: ${spacing.centi};
           `,
+        body: css `
+          padding-top: ${spacing.mega};
+          margin: ${spacing.regular};
+          align-items: center;
+      `,
+        link: css `
+            text-decoration: underline;    
+        `
     };
 
 
@@ -47,23 +57,28 @@ function HomePage(props) {
     return (
     <div>
         <NavigationBar> </NavigationBar>
-        <div className={styles.row}>
-
-            <div className={styles.column}>
-                <p>
+        <Container className={styles.body}>
+            <Row>
+                <Col>
+                <p> 
                 Hi I’m Jennifer Xiao!
                 </p>
 
                 <p>
                 I am a 4th year EECS major at UC Berkeley 🐻  ⏤ currently seeking internship opportunities in SWE.
                 </p>
-                <NavLink style={{color: colors.blue}} className={styles.link} activeClassName={styles.activeLink} to="/work" > See what work I do in CS </NavLink>
-                <NavLink style={{color: colors.redorange}} className={styles.link} activeClassName={styles.activeLink} to="/play" > and what I do outside of it </NavLink>
-            </div>
-            <div className={styles.column}>
-                <img src={"./"}/> 
-            </div>
-        </div>
+                <NavLink style={{color: colors.blue}} className={styles.link} to="/work" > See what work I do in CS  ↗ </NavLink>
+                <p>
+                <NavLink style={{color: colors.redorange}} className={styles.link} to="/play" > and what I do outside of it  ↗ </NavLink>
+                </p>
+                </Col>
+                <Col>
+                 <Image> 
+
+                 </Image>
+                </Col>
+            </Row>
+        </Container>
     </div>
     )
 }
