@@ -76,7 +76,9 @@ function WorkPage(props) {
         <div className={styles.body}>
             <div className={styles.top} >
                 <p styles={fontStyles.lion}> 
-                    <NavLink style={{color: colors.black, textDecoration: "underline"}}   to="/resume" >  View my resume in paper form:   📄 </NavLink>
+                    <NavLink style={{color: colors.black, textDecoration: "underline"}}   to="https://jenniferxiao.me/XiaoJenniferResume2019.pdf" >  
+                        View my resume in paper form:   📄 
+                    </NavLink>
                 </p>
                 <p styles={fontStyles.lion}>  Or scroll down </p>
                 <p> ↓ </p>
