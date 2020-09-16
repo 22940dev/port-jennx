@@ -1,5 +1,5 @@
 import React, { useRef } from 'react';
-import { NavLink } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import { css } from 'emotion';
 import { buildPageSpacing, spacing, fontStyles, colors } from '../../styles';
 import useDimensions from "react-cool-dimensions";
@@ -94,7 +94,11 @@ const techPills = props.techStack.map(technology => <TechStack tech={technology}
               {techPills}
             </Row>
 
-            <NavLink style={{color: colors.redorange, bottom: "0px"}} className={styles.link} activeClassName={styles.activeLink} to="/play" > More about this project ↗ </NavLink>
+            {props.link ? 
+              <a style={{color: colors.redorange, bottom: "0px"}} className={styles.link} activeClassName={styles.activeLink} href={props.link} > Link to this project ↗ </a>
+              : <div> </div>
+            }
+            
         </Col>
 
       </Row>

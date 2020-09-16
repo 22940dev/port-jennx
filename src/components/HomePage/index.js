@@ -8,6 +8,7 @@ import Col from 'react-bootstrap/Col';
 import Container from 'react-bootstrap/Container';
 import Image from 'react-bootstrap/Image';
 import useDimensions from "react-cool-dimensions";
+import me from './me.jpg'
  
 function HomePage(props) {
     const ref = useRef();
@@ -46,9 +47,12 @@ function HomePage(props) {
           padding-top: ${spacing.mega};
           margin: ${spacing.regular};
           align-items: center;
+          font-size: x-large;
+          font-family: Lato;
+          margin-bottom: 0px;
       `,
         link: css `
-            text-decoration: underline;    
+          text-decoration: underline;    
         `
     };
 
@@ -58,7 +62,7 @@ function HomePage(props) {
     <div>
         <NavigationBar> </NavigationBar>
         <Container className={styles.body}>
-            <Row>
+            <Row  xs={1} sm={1}>
                 <Col>
                 <p> 
                 Hi I’m Jennifer Xiao!
@@ -72,8 +76,8 @@ function HomePage(props) {
                 <NavLink style={{color: colors.redorange}} className={styles.link} to="/play" > and what I do outside of it  ↗ </NavLink>
                 </p>
                 </Col>
-                <Col>
-                 <Image> 
+                <Col style={{bottom: 0}}>
+                  <Image style={{bottom: 0}} fluid src={me}> 
 
                  </Image>
                 </Col>

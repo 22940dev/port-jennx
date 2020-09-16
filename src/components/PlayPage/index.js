@@ -3,12 +3,30 @@ import NavigationBar from '../NavigationBar';
 import { NavLink } from 'react-router-dom';
 import { css } from 'emotion';
 import { buildPageSpacing, spacing, fontStyles, colors } from '../../styles';
-import ami from './images/art/Ami_komura.jpg';
 import Carousel from 'react-bootstrap/Carousel';
 import Row from 'react-bootstrap/Row';
 import Container from 'react-bootstrap/Container';
 
+import ami from './images/art/Ami_komura.jpg';
+import animals from './images/art/animals.JPG';
+import clothing2 from './images/art/clothing2.jpg';
+import hwasa from './images/art/hwasa.JPG';
+import sketches2 from './images/art/sketches2.JPG';
+import solar from './images/art/solar.JPG';
+import koreanactor from './images/art/koreanactor.jpg';
+
 function PlayPage(props) {
+  let art = [ami, animals, clothing2, hwasa, sketches2, solar, koreanactor];
+
+  let artCaro = art.map(artLink => 
+    <Carousel.Item>
+      <img
+        className="d-block w-100"
+        src={artLink}
+        alt=""
+      />
+    </Carousel.Item>
+    )
 
   const styles = {
     navigationBar: css`
@@ -83,22 +101,16 @@ function PlayPage(props) {
         <div className={styles.body}>
         
         <p className={styles.header}> <span className={styles.spanred}> Art </span></p>
-        <p className={styles.description} >  words about art </p>
+        <p className={styles.description} >  Some sketches and photostudies done in Procreate or on paper with graphite/prismacolor pencils </p>
         <Container> 
           <Row>
             <Carousel>
-              <Carousel.Item>
-                <img
-                  className="d-block w-100"
-                  src={ami}
-                  alt=""
-                />
-              </Carousel.Item>
+            {artCaro}
               
             </Carousel>
           </Row>
         </Container>
-          <p className={styles.header}> <span className={styles.spanred}> Cooking </span></p>
+          {/* <p className={styles.header}> <span className={styles.spanred}> Cooking </span></p>
         <Container>
           <Row>
             <Carousel>
@@ -113,7 +125,7 @@ function PlayPage(props) {
             </Carousel>
           </Row>
           </Container>
-          <p className={styles.header}> <span className={styles.spanred}> Dance </span></p>
+          <p className={styles.header}> <span className={styles.spanred}> Dance </span></p> */}
         </div>
     </div>
   )

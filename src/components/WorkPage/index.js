@@ -1,14 +1,17 @@
 import React, { useRef } from 'react';
 import NavigationBar from '../NavigationBar';
-import { NavLink } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import { css } from 'emotion';
 import { buildPageSpacing, spacing, fontStyles, colors } from '../../styles';
 import RobotoMono from 'typeface-roboto-mono';
 import Lato from 'typeface-lato';
 import useDimensions from "react-cool-dimensions";
 import Project from './Project';
-import bloom from './images/bloom.png'
-import servicenow from './images/servicenow.png'
+import bloom from './images/bloom.png';
+import servicenow from './images/servicenow.png';
+import pdf from './Xiao_Jennifer_Fall2021.pdf';
+import research from './images/research.jpg';
+import codeo from "./images/codeo.png";
 
 function WorkPage(props) {
     const styles = {
@@ -76,9 +79,9 @@ function WorkPage(props) {
         <div className={styles.body}>
             <div className={styles.top} >
                 <p styles={fontStyles.lion}> 
-                    <NavLink style={{color: colors.black, textDecoration: "underline"}}   to="https://jenniferxiao.me/XiaoJenniferResume2019.pdf" >  
+                    <a style={{color: colors.black, textDecoration: "underline", pointerEvents: "all"}} href="" onClick={() => window.open(pdf)}  >  
                         View my resume in paper form:   📄 
-                    </NavLink>
+                    </a>
                 </p>
                 <p styles={fontStyles.lion}>  Or scroll down </p>
                 <p> ↓ </p>
@@ -93,6 +96,7 @@ function WorkPage(props) {
                     description="Developing front-end features in React, such as scanable price charts and sortable investment portfolios.  Building dynamic collections of investments using Python."
                     techStack={["React", "CSS", "Python"]}
                     img={bloom}
+                    link="https://apps.apple.com/us/app/bloom-stock-market-research/id1436348671"
                 />
 
                 <Project 
@@ -108,6 +112,7 @@ function WorkPage(props) {
                     "
                     techStack={["React", "CSS", "Angular", "REST API", "Google API"]}
                     img={servicenow}
+                    link=""
                 />  
 
 
@@ -122,6 +127,18 @@ function WorkPage(props) {
                     "
                     techStack={["SpringBoot", "Java", "Java Play", "REST API", "microservices"]}
                     img={""}
+                    link=""
+                />      
+                <Project 
+                    title="Matlab data processing for rodent MRI"
+                    role="BioE Research Intern "
+                    subhead="Summer 2016 • Summer 2015"
+                    description="(2017) Improved data extraction speed 2x on rat brain MR images through new technique
+                    (2016) Developed image processing automation in Matlab to identify infected brain cells.
+                    "
+                    techStack={["Matlab"]}
+                    img={research}
+                    link=""
                 />      
             
             
@@ -129,10 +146,44 @@ function WorkPage(props) {
                 <p className={styles.header}> <span className={styles.spanblue}> Projects </span></p>
             </div>
 
+            <Project 
+                    title="The Music Connection Rails Web App"
+                    role="CS168 Software Engineering Client Project"
+                    subhead="Fall 2019"
+                    description="Developed Rails web app to schedule music tutoring between teachers and 75 volunteer UC
+                        Berkeley students. Utilizing test-driven-development and Agile practices to refactor legacy code
+                    "
+                    techStack={["Rails", "Heroku", "CSS" , "Agile Development"]}
+                    img={"./images/research.jpg"}
+                    link="https://tmc-ucberkeley.herokuapp.com/"
+                />   
+
+            <Project 
+                    title="iOS Chatbot Food Recommendations"
+                    role="Codeology Project Lead (team of 6)"
+                    subhead="Spring 2019"
+                    description="Led a 6 person team to create an iOS app that allows users to swipe through restaurants based
+                    on their responses to a chatbot. Uses Yelp API and Flask to service REST API
+                    "
+                    techStack={["iOS", "Swift", "Flask" , "Yelp API"]}
+                    img={"./images/research.jpg"}
+                    link="https://github.com/tinayzhao/cravebot"
+            />    
+
             <div className={styles.row}>
                 <p className={styles.header}> <span className={styles.spanblue}> Projects </span></p>
             </div>
-      </div>
+            <Project 
+                    title="Social Chair"
+                    role="Codeology"
+                    subhead="Fall 2019 - Spring 2020"
+                    description="Organized 2 semester retreats and 15+ social events for 70+ club member
+                    "
+                    techStack={[]}
+                    img={codeo}
+                    link="https://www.codeology.club/"
+            />  
+      Xiao</div>
     </div>
   )
 }
