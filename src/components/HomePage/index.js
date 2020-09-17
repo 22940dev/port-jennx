@@ -9,6 +9,7 @@ import Container from 'react-bootstrap/Container';
 import Image from 'react-bootstrap/Image';
 import useDimensions from "react-cool-dimensions";
 import me from './me.jpg'
+import Footer from '../Footer'
  
 function HomePage(props) {
     const ref = useRef();
@@ -61,20 +62,20 @@ function HomePage(props) {
     return (
     <div>
         <NavigationBar> </NavigationBar>
-        <Container className={styles.body}>
-            <Row  xs={1} sm={1}>
+        <Container fluid="sm" className={styles.body}>
+            <Row  md={2} xs={1} sm={1}>
                 <Col>
-                <p> 
-                Hi I’m Jennifer Xiao!
-                </p>
+                  <p> 
+                  Hi I’m Jennifer Xiao!
+                  </p>
 
-                <p>
-                I am a 4th year EECS major at UC Berkeley 🐻  ⏤ currently seeking internship opportunities in SWE.
-                </p>
-                <NavLink style={{color: colors.blue}} className={styles.link} to="/work" > See what work I do in CS  ↗ </NavLink>
-                <p>
-                <NavLink style={{color: colors.redorange}} className={styles.link} to="/play" > and what I do outside of it  ↗ </NavLink>
-                </p>
+                  <p>
+                  I am a 4th year EECS major at UC Berkeley 🐻  ⏤ currently seeking internship opportunities in SWE.
+                  </p>
+                  <NavLink style={{color: colors.blue}} className={styles.link} to="/work" > See what work I do in CS  ↗ </NavLink>
+                  <p>
+                  <NavLink style={{color: colors.redorange}} className={styles.link} to="/play" > and what I do outside of it  ↗ </NavLink>
+                  </p>
                 </Col>
                 <Col style={{bottom: 0}}>
                   <Image style={{bottom: 0}} fluid src={me}> 
@@ -83,6 +84,7 @@ function HomePage(props) {
                 </Col>
             </Row>
         </Container>
+        <Footer> </Footer>
     </div>
     )
 }

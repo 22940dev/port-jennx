@@ -1,63 +1,22 @@
 import React, { useRef } from 'react';
 import NavigationBar from '../NavigationBar';
+import Footer from "../Footer";
 import { NavLink } from 'react-router-dom';
 import { css } from 'emotion';
 import { buildPageSpacing, spacing, fontStyles, colors } from '../../styles';
 import Carousel from 'react-bootstrap/Carousel';
+import Gallery from 'react-grid-gallery';
 import Row from 'react-bootstrap/Row';
 import Container from 'react-bootstrap/Container';
-
-import ami from './images/art/Ami_komura.jpg';
-import animals from './images/art/animals.JPG';
-import clothing2 from './images/art/clothing2.jpg';
-import hwasa from './images/art/hwasa.JPG';
-import sketches2 from './images/art/sketches2.JPG';
-import solar from './images/art/solar.JPG';
-import koreanactor from './images/art/koreanactor.jpg';
+import Tabs from 'react-bootstrap/Tabs';
+import Tab from 'react-bootstrap/Tab';
+import Nav from 'react-bootstrap/Nav';
+import TabContainer from 'react-bootstrap/TabContainer';
+import Art from '../Art';
+import Cooking from '../Cooking';
 
 function PlayPage(props) {
-  let art = [ami, animals, clothing2, hwasa, sketches2, solar, koreanactor];
-
-  let artCaro = art.map(artLink => 
-    <Carousel.Item>
-      <img
-        className="d-block w-100"
-        src={artLink}
-        alt=""
-      />
-    </Carousel.Item>
-    )
-
   const styles = {
-    navigationBar: css`
-      z-index: 1;
-      background-color: ${colors.snow};
-      position: fixed;
-      width: 100%;
-      left: 0;
-      top: 0;
-      height: 10%;
-      padding-bottom: 20px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      margin: 0 0 ${spacing.regular} 0;
-    `,
-    row: css`
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        width: 100%;
-        position: relative;
-      `,
-    column: css`
-        display: flex;
-        flex-direction: column;
-        flex-basis: 100%;
-        flex: 1;
-        margin: ${spacing.centi};
-        margin-bottom: 10%;
-      `,
     header: css`
         font-family: Roboto Mono;
         font-size: x-large;
@@ -91,42 +50,58 @@ function PlayPage(props) {
     top: css `
         font-size: x-large;
         margin-top: ${spacing.kilo};
+        color: ${colors.black};
+    `,
+    carousel: css `
+      width: 500px;
+      height:500px;
+      margin: auto;
     `
 };
 
 
   return (
     <div>
-        <NavigationBar> </NavigationBar>
+        <NavigationBar/>
         <div className={styles.body}>
-        
-        <p className={styles.header}> <span className={styles.spanred}> Art </span></p>
-        <p className={styles.description} >  Some sketches and photostudies done in Procreate or on paper with graphite/prismacolor pencils </p>
-        <Container> 
-          <Row>
-            <Carousel>
-            {artCaro}
-              
-            </Carousel>
-          </Row>
-        </Container>
-          {/* <p className={styles.header}> <span className={styles.spanred}> Cooking </span></p>
         <Container>
+        <Row>
+        <Tab.Container id="left-tabs-example" defaultActiveKey="art">
           <Row>
-            <Carousel>
-              <Carousel.Item>
-                <img
-                  className="d-block w-100"
-                  src={ami}
-                  alt=""
-                />
-              </Carousel.Item>
-              
-            </Carousel>
+              <Nav c variant="tabs" lassName="justify-content-center">
+                  <Nav.Item>
+                    <Nav.Link eventKey="art"> <span className="styles.top"> Art </span></Nav.Link>
+                  </Nav.Item>
+                  <Nav.Item>
+                    <Nav.Link eventKey="cooking">Cooking</Nav.Link>
+                  </Nav.Item>
+              </Nav>
+            </Row>
+          <Row>
+              <Tab.Content>
+                <Tab.Pane eventKey="art">
+                  <Art></Art>
+                </Tab.Pane>
+                <Tab.Pane eventKey="cooking">
+                  <Cooking/>
+                </Tab.Pane>
+              </Tab.Content>
           </Row>
-          </Container>
-          <p className={styles.header}> <span className={styles.spanred}> Dance </span></p> */}
+          
+        </Tab.Container>
+        </Row>
+        </Container>
+          {/* <Container>
+            <Row>
+              <p className={styles.top}>
+              <NavLink className={styles.top} activeClassName={styles.activeLink} to="/art" > Art </NavLink>
+              /
+              <NavLink className={styles.top} activeClassName={styles.activeLink} to="/dance" > Dance </NavLink>
+              </p>   
+            </Row>
+          </Container> */}
         </div>
+        <Footer/>
     </div>
   )
 }

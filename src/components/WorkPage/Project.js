@@ -60,7 +60,9 @@ function Project(props) {
     body: css `
       font-family: Lato;
       color: ${colors.black};
-      font-size: medium;      
+      font-size: medium;    
+      padding-left: 10px;
+      margin-left: 10px;
   `,
   link: css`
     text-decoration: underline;
@@ -75,20 +77,20 @@ function Project(props) {
 };
 
 const techPills = props.techStack.map(technology => <TechStack tech={technology} > </TechStack>);
-
+const description = props.description.map(texts => <li> {texts} </li>);
   return (
   <Container style={{backgroundColor: colors.white, paddingBottom: "10px", marginBottom: "25px"}}> 
     <p className={styles.title}> {props.title} | <span style={{color: colors.grey}} > {props.role} </span> </p> 
     <p className={styles.subhead} > {props.subhead} </p>
     <Container fluid="true"> 
-      <Row xs={1} sm={1}>
-        <Col xs lg="5">
+      <Row md={2} xs={1} sm={1}>
+        <Col>
           <div className={styles.image}>
               <Image fluid src={props.img}/>     
           </div>
         </Col>
-        <Col xs lg="5" style={{textAlign: "left"}}  >
-            <p className={styles.body} > {props.description} </p>
+        <Col style={{textAlign: "left"}}  >
+            <ul className={styles.body} > {description} </ul>
             
             <Row md="auto" > 
               {techPills}

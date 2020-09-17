@@ -3,15 +3,16 @@ import NavigationBar from '../NavigationBar';
 import { Link } from 'react-router-dom';
 import { css } from 'emotion';
 import { buildPageSpacing, spacing, fontStyles, colors } from '../../styles';
-import RobotoMono from 'typeface-roboto-mono';
-import Lato from 'typeface-lato';
-import useDimensions from "react-cool-dimensions";
+import Footer from "../Footer";
 import Project from './Project';
 import bloom from './images/bloom.png';
 import servicenow from './images/servicenow.png';
 import pdf from './Xiao_Jennifer_Fall2021.pdf';
 import research from './images/research.jpg';
 import codeo from "./images/codeo.png";
+import stratim from "./images/stratim.png";
+import music from "./images/169.gif";
+import crave from "./images/crave.png";
 
 function WorkPage(props) {
     const styles = {
@@ -75,7 +76,7 @@ function WorkPage(props) {
 
   return (
     <div>
-      <NavigationBar> </NavigationBar>
+        <NavigationBar/>
         <div className={styles.body}>
             <div className={styles.top} >
                 <p styles={fontStyles.lion}> 
@@ -93,7 +94,7 @@ function WorkPage(props) {
                     title="Bloom: Stock Market Research App"
                     role="Software Intern"
                     subhead="June 2020 - Present"
-                    description="Developing front-end features in React, such as scanable price charts and sortable investment portfolios.  Building dynamic collections of investments using Python."
+                    description={["Developing front-end features in React, such as scanable price charts and sortable investment portfolios.  Building dynamic collections of investments using Python."]}
                     techStack={["React", "CSS", "Python"]}
                     img={bloom}
                     link="https://apps.apple.com/us/app/bloom-stock-market-research/id1436348671"
@@ -103,13 +104,12 @@ function WorkPage(props) {
                     title="ServiceNow"
                     role="Applications Development SWE Intern"
                     subhead="Summer 2019 • Santa Clara 2020 - Present"
-                    description="Migrated single-use-case map application built in Angular to React as reusable component useful for company-wide product development
-                    
-                    Integrated map into Agent Workspace product, a centralized web app for dispatch workers
+                    description={[
+                        "Migrated single-use-case map application built in Angular to React as reusable component useful for company-wide product development",
+                        "Integrated map into Agent Workspace product, a centralized web app for dispatch workers",
+                        "Built filtered data selection utilizing RESTful API and display of custom clustered markers on a map using Google API",
 
-                    Built filtered data selection utilizing RESTful API and display of custom clustered markers on a map using Google API
-
-                    "
+                    ]}
                     techStack={["React", "CSS", "Angular", "REST API", "Google API"]}
                     img={servicenow}
                     link=""
@@ -120,22 +120,22 @@ function WorkPage(props) {
                     title="Kar (formerly STRATIM)"
                     role="Backend SWE Intern"
                     subhead="Summer 2018 • San Francisco"
-                    description="Built new microservice with REST API to manage mobile app events using Spring Boot. Improved server reliability and speed by moving away from monolithic server architecture
-
-                    Developed internal HR tooling using Java Play to automate re-processing of employees 
-
-                    "
+                    description={[
+                        "Built new microservice with REST API to manage mobile app events using Spring Boot. Improved server reliability and speed by moving away from monolithic server architecture",
+                        "Developed internal HR tooling using Java Play to automate re-processing of employees", 
+                    ]}
                     techStack={["SpringBoot", "Java", "Java Play", "REST API", "microservices"]}
-                    img={""}
+                    img={stratim}
                     link=""
                 />      
                 <Project 
                     title="Matlab data processing for rodent MRI"
                     role="BioE Research Intern "
                     subhead="Summer 2016 • Summer 2015"
-                    description="(2017) Improved data extraction speed 2x on rat brain MR images through new technique
-                    (2016) Developed image processing automation in Matlab to identify infected brain cells.
-                    "
+                    description={[
+                        "(2017) Improved data extraction speed 2x on rat brain MR images through new technique", 
+                        "(2016) Developed image processing automation in Matlab to identify infected brain cells."
+                    ]}
                     techStack={["Matlab"]}
                     img={research}
                     link=""
@@ -150,11 +150,9 @@ function WorkPage(props) {
                     title="The Music Connection Rails Web App"
                     role="CS168 Software Engineering Client Project"
                     subhead="Fall 2019"
-                    description="Developed Rails web app to schedule music tutoring between teachers and 75 volunteer UC
-                        Berkeley students. Utilizing test-driven-development and Agile practices to refactor legacy code
-                    "
+                    description={["Developed Rails web app to schedule music tutoring between teachers and 75 volunteer UC Berkeley students. Utilizing test-driven-development and Agile practices to refactor legacy code"]}
                     techStack={["Rails", "Heroku", "CSS" , "Agile Development"]}
-                    img={"./images/research.jpg"}
+                    img={music}
                     link="https://tmc-ucberkeley.herokuapp.com/"
                 />   
 
@@ -162,28 +160,26 @@ function WorkPage(props) {
                     title="iOS Chatbot Food Recommendations"
                     role="Codeology Project Lead (team of 6)"
                     subhead="Spring 2019"
-                    description="Led a 6 person team to create an iOS app that allows users to swipe through restaurants based
-                    on their responses to a chatbot. Uses Yelp API and Flask to service REST API
-                    "
+                    description={["Led a 6 person team to create an iOS app that allows users to swipe through restaurants based on their responses to a chatbot. Uses Yelp API and Flask to service REST API "]}
                     techStack={["iOS", "Swift", "Flask" , "Yelp API"]}
-                    img={"./images/research.jpg"}
+                    img={crave}
                     link="https://github.com/tinayzhao/cravebot"
             />    
 
             <div className={styles.row}>
-                <p className={styles.header}> <span className={styles.spanblue}> Projects </span></p>
+                <p className={styles.header}> <span className={styles.spanblue}> Other </span></p>
             </div>
             <Project 
                     title="Social Chair"
                     role="Codeology"
                     subhead="Fall 2019 - Spring 2020"
-                    description="Organized 2 semester retreats and 15+ social events for 70+ club member
-                    "
+                    description={["Organized 2 semester retreats and 15+ social events for 70+ club member"]}
                     techStack={[]}
                     img={codeo}
                     link="https://www.codeology.club/"
             />  
-      Xiao</div>
+      </div>
+        <Footer/>
     </div>
   )
 }
