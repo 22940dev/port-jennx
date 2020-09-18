@@ -1,10 +1,9 @@
 [[redirects]]
-  from = "/"
-  to = "/about"
-  status = 301
+  from = "/*"
+  to = "/index.html"
+  status = 200
   force = false
   query = {path = ":path"}
-  conditions = {Language = ["en"], Country = ["US"], Role = ["admin"]}
 
 [[headers]]
   for = "/*"
