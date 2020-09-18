@@ -54,15 +54,15 @@ function Footer() {
   return (
     <div className={styles.navigationBar}>
       <div >
-        <a href={`mailto:jenniferxiao@berkeley.edu`}> <Email/> Email me! </a>
-        <a href="https://github.com/jennxiao"> 
+        <a href={`mailto:jenniferxiao@berkeley.edu`} color = {colors.black}  > <Email/> Email me! </a>
+        <a href="https://github.com/jennxiao" target="_blank"> 
           <img className={styles.link} src={git} />
         </a>
-        <a href="https://linkedin.com/in/jennifer-xiao-181459156/"> <img className={styles.link} src={linkedin}/>
+        <a href="https://linkedin.com/in/jennifer-xiao-181459156/" target="_blank"> <img className={styles.link} src={linkedin}/>
         </a>
       </div>
       <div className={styles.right}>
-        <a class="text-muted small mb-0" href="github.com/jennxiao/personalwebsite" color = "#fff">built with create-react-app </a>
+        <a class="text-muted small mb-0" href="github.com/jennxiao/personalwebsite" color = "#fff" target="_blank" >built with create-react-app </a>
       </div>  
     </div>
   )

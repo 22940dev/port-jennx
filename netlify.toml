@@ -1,0 +1,13 @@
+[[redirects]]
+  from = "/"
+  to = "/about"
+  status = 301
+  force = false
+  query = {path = ":path"}
+  conditions = {Language = ["en"], Country = ["US"], Role = ["admin"]}
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options = "DENY"
+    X-XSS-Protection = "1; mode=block"

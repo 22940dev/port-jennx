@@ -17,6 +17,16 @@ import koreanactor from './images/art/koreanactor.jpg';
 import pizza from "./images/art/Pizza.jpg";
 import paper from "./images/art/paper.JPG";
 
+import art from './images/art/art.jpg';
+import art1 from './images/art/art1.JPG';
+import art2 from './images/art/art2.JPG';
+import art3 from './images/art/art3.JPG';
+import art4 from './images/art/art4.JPG';
+import art5 from './images/art/art5.jpg';
+import art6 from './images/art/art6.JPG';
+import art7 from './images/art/art7.JPG';
+import art8 from './images/art/art8.JPG';
+
 function Art(props) {
   const IMAGES =
     [{
@@ -73,7 +83,64 @@ function Art(props) {
       thumbnail:  clothing2,
       thumbnailWidth: 320,
       thumbnailHeight: 320,
-    }];
+    },
+    {
+      src: art,
+      thumbnail: art,
+      thumbnailWidth: 2763,
+      thumbnailHeight: 3445,
+    },
+    {
+      src: art1,
+      thumbnail:  art1,
+      thumbnailWidth: 1539,
+      thumbnailHeight: 2448,
+    },
+    {
+      src: art2,
+      thumbnail: art2,
+      thumbnailWidth: 3024,
+      thumbnailHeight: 3024,
+    },
+    {
+      src: art3,
+      thumbnail:  art3,
+      thumbnailWidth: 2640,
+      thumbnailHeight: 2640,
+    },
+    {
+      src: art4,
+      thumbnail: art4,
+      thumbnailWidth: 3024,
+      thumbnailHeight: 3024,
+    },
+    {
+      src: art5,
+      thumbnail:  art5,
+      thumbnailWidth: 3024,
+      thumbnailHeight: 3024,
+    },
+    {
+      src: art6,
+      thumbnail: art6,
+      thumbnailWidth: 693,
+      thumbnailHeight: 866,
+    },
+    {
+      src: art7,
+      thumbnail:  art7,
+      thumbnailWidth: 719,
+      thumbnailHeight: 719,
+    },
+    {
+      src: art8,
+      thumbnail: art8,
+      thumbnailWidth: 1024,
+      thumbnailHeight: 1820,
+    },
+  
+  
+  ];
 
 
 

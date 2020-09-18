@@ -97,7 +97,7 @@ const description = props.description.map(texts => <li> {texts} </li>);
             </Row>
 
             {props.link ? 
-              <a style={{color: colors.redorange, bottom: "0px"}} className={styles.link} activeClassName={styles.activeLink} href={props.link} > Link to this project ↗ </a>
+              <a style={{color: colors.redorange, bottom: "0px"}} className={styles.link} activeClassName={styles.activeLink} href={props.link}  target="_blank" > Link to this project ↗ </a>
               : <div> </div>
             }
             

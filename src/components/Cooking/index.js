@@ -18,17 +18,27 @@ import g from "./images/cooking7.jpg";
 import h from "./images/cooking8.jpg";
 import i from "./images/cooking9.jpg";
 import j from "./images/cooking5.jpg";
+
+import a1 from "./images/food11.jpg";
+import b1 from "./images/food12.jpg";
+import c1 from "./images/food13.jpg";
+import d1 from "./images/food14.JPG";
+import e1 from "./images/food15.jpg";
+import f1 from "./images/food16.jpg";
+import g1 from "./images/food17.jpg";
+import h1 from "./images/food18.jpg";
+import i1 from "./images/food18.jpg";
 import { generateKeyPair } from 'crypto';
 
 function Cooking(props) {
-  const IMAGES =
-    [{
-            src: a,
-            thumbnail: a,
-            thumbnailWidth: 3088,
-            thumbnailHeight: 2316,
-            caption: "Ami Komura"
-    },
+  const IMAGES = [
+    // [{
+    //         src: a,
+    //         thumbnail: a,
+    //         thumbnailWidth: 3088,
+    //         thumbnailHeight: 2316,
+    //         caption: "cooking pasta with "
+    // },
     {
             src: b,
             thumbnail: b,
@@ -76,7 +86,68 @@ function Cooking(props) {
       thumbnail:  g,
       thumbnailWidth: 4032,
       thumbnailHeight: 3024,
-    }];
+      caption: "coffee cake (recipe from Binging with Babish)"
+    },
+    {
+      src: a1,
+      thumbnail: a1,
+      thumbnailWidth: 3024,
+      thumbnailHeight: 3499,
+      caption: "chicken brocolli pasta"
+},
+{
+      src: b1,
+      thumbnail: b1,
+      thumbnailWidth: 2697,
+      thumbnailHeight: 2430,
+},
+{
+    src: c1,
+    thumbnail: c1,
+    thumbnailWidth: 2724,
+    thumbnailHeight: 3634,
+},
+{
+src: d1,
+thumbnail: d1,
+thumbnailWidth: 2653,
+thumbnailHeight: 3208,
+caption: "spicy bulgolgi beef (recipe from Korean Bapsang)"
+},
+{
+src: e1,
+thumbnail: e1,
+thumbnailWidth: 4032,
+thumbnailHeight: 3024,
+},
+{
+src: h1,
+thumbnail: h1,
+thumbnailWidth: 775,
+thumbnailHeight: 1090,
+caption: "mango crepe"
+},
+// {
+// src: i1,
+// thumbnail: i1,
+// thumbnailWidth: 3261,
+// thumbnailHeight: 2702,
+// caption: "kimchi fried rice"
+// },
+{
+src: f1,
+thumbnail: f1,
+thumbnailWidth: 3261,
+thumbnailHeight: 2702,
+caption: "kimchi fried rice"
+},
+{
+src: g1,
+thumbnail:  g1,
+thumbnailWidth: 3986, 
+thumbnailHeight: 2553,
+}
+  ];
 
 
 
