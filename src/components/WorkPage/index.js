@@ -93,7 +93,7 @@ function WorkPage(props) {
                 <Project 
                     title="Bloom: Stock Market Research App"
                     role="Software Intern"
-                    subhead="June 2020 - Present"
+                    subhead="July 2020 - Present"
                     description={["Developing front-end features in React, such as scanable price charts and sortable investment portfolios.  Building dynamic collections of investments using Python."]}
                     techStack={["React", "CSS", "Python"]}
                     img={bloom}
