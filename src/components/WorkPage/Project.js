@@ -4,18 +4,10 @@ import { css } from 'emotion';
 import { buildPageSpacing, spacing, fontStyles, colors } from '../../styles';
 import useDimensions from "react-cool-dimensions";
 import TechStack from "./Tech";
-// import Container from 'react-bootstrap';
-// import Row from 'react-bootstrap';
-// import Column from 'react-bootstrap';
-// import { Container, Row, Column } from 'bootstrap';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Container from 'react-bootstrap/Container';
 import Image from 'react-bootstrap/Image';
-// import Container from 'react-bootstrap/Container';
-// import Row from 'react-bootstrap/Row';
-// import Column from 'react-bootstrap/Column';
-
  
 function Project(props) {
   const styles = {

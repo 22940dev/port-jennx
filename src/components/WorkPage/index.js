@@ -13,6 +13,7 @@ import codeo from "./images/codeo.png";
 import stratim from "./images/stratim.png";
 import music from "./images/169.gif";
 import crave from "./images/crave.png";
+import Row from 'react-bootstrap/Row';
 
 function WorkPage(props) {
     const styles = {

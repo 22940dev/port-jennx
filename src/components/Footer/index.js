@@ -2,9 +2,10 @@ import React, {useRef} from "react"
 import { NavLink } from 'react-router-dom';
 import { buildPageSpacing, spacing, fontStyles, colors } from '../../styles';
 import { css } from 'emotion';
-import Email from '@material-ui/icons/Email'
+
 import git from './github.svg'
-import linkedin from './linkedin.png'
+import email from './email.svg'
+import linkedin from './linkedin.svg'
 import Row from 'react-bootstrap/Row';
 import Container from 'react-bootstrap/Container';
 
@@ -48,22 +49,31 @@ function Footer() {
           justify-content: space-between;
           vertical-align: center;
         `,
+        left: css`
+          float:left;
+          margin-left:  ${spacing.regular};
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          vertical-align: center;
+        `,
       };
     
     
   return (
     <div className={styles.navigationBar}>
-      <div >
-        <a href={`mailto:jenniferxiao@berkeley.edu`} color = {colors.black}  > <Email/> Email me! </a>
+      <div>
+        <a href={`mailto:jenniferxiao@berkeley.edu`} color = {colors.black}> <img className={styles.link} src={email} />  </a>
         <a href="https://github.com/jennxiao" target="_blank"> 
           <img className={styles.link} src={git} />
         </a>
         <a href="https://linkedin.com/in/jennifer-xiao-181459156/" target="_blank"> <img className={styles.link} src={linkedin}/>
         </a>
       </div>
+        
       <div className={styles.right}>
-        <a class="text-muted small mb-0" href="github.com/jennxiao/personalwebsite" color = "#fff" target="_blank" >built with create-react-app </a>
-      </div>  
+        <a class="text-muted small mb-0" href="github.com/jennxiao/personalwebsite" color = "#fff" target="_blank" > built with React </a>
+      </div> 
     </div>
   )
 }
