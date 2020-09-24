@@ -14,6 +14,7 @@ import stratim from "./images/stratim.png";
 import music from "./images/169.gif";
 import crave from "./images/crave.png";
 import Row from 'react-bootstrap/Row';
+import Col from 'react-bootstrap/Col';
 
 function WorkPage(props) {
     const styles = {
@@ -68,10 +69,20 @@ function WorkPage(props) {
             padding-top: ${spacing.mega};
             margin: ${spacing.regular};
             align-items: center;
+            font-family: Lato;
         `,
         top: css `
             font-size: x-large;
             margin-top: ${spacing.kilo};
+        `,
+        list: css `
+            background-color: ${colors.white};
+            margin-bottom: 25px;
+            font-family: Lato;
+            font-size: medium;
+            padding: 10px;
+            list-style-position: inside;
+            text-align: left;
         `
     };
 
@@ -93,7 +104,7 @@ function WorkPage(props) {
             </div>
                 <Project 
                     title="Bloom: Stock Market Research App"
-                    role="Software Intern"
+                    role="Software Engineering Intern"
                     subhead="July 2020 - Present"
                     description={["Developing front-end features in React, such as scanable price charts and sortable investment portfolios.  Building dynamic collections of investments using Python."]}
                     techStack={["React", "CSS", "Python"]}
@@ -166,6 +177,49 @@ function WorkPage(props) {
                     img={crave}
                     link="https://github.com/tinayzhao/cravebot"
             />    
+
+            <div className={styles.row}>
+                <p className={styles.header}> <span className={styles.spanblue}> Skills </span></p>
+            </div>
+            <div className={styles.list}>
+            <Row md={3} xs={1} sm={1} >
+                <Col>
+                    <p style={{fontWeight: 600}} > Relevant Coursework </p> 
+                    <ul> 
+                        <li> Operating Systems </li>
+                        <li> Networking  </li>
+                        <li> Security  </li>
+                        <li> Software Engineering  </li>
+                        <li> Algorithms </li>
+                        <li> Intro to AI  </li>
+                    </ul>
+                   
+                </Col>
+
+                <Col>
+                    <p style={{fontWeight: 600}} >  Frameworks/Tech </p> 
+                    <ul> 
+                        <li> React </li>
+                        <li> Ruby on Rails </li>
+                        <li> Adobe Suite / Figma </li>
+                    </ul>
+                </Col>
+                <Col>
+                    <p style={{fontWeight: 600}} > Languages I've worked with </p> 
+                    <ul> 
+                        <li> Java  </li>
+                        <li>  Python </li>
+                        <li> JavaScript </li>
+                        <li> C </li>
+                        <li> Ruby </li>
+                        <li> Go </li>
+                        <li> Swift </li>
+                        <li> SQL </li>
+                    </ul>
+                </Col>
+
+            </Row>
+            </div>
 
             <div className={styles.row}>
                 <p className={styles.header}> <span className={styles.spanblue}> Other </span></p>

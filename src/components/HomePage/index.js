@@ -62,7 +62,7 @@ function HomePage(props) {
     return (
     <div>
         <NavigationBar> </NavigationBar>
-        <Container fluid="sm" className={styles.body}>
+        <Container  className={styles.body}>
             <Row  md={2} xs={1} sm={1}>
                 <Col>
                   <p> 
