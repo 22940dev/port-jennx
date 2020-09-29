@@ -106,7 +106,7 @@ function WorkPage(props) {
                     title="Bloom: Stock Market Research App"
                     role="Software Engineering Intern"
                     subhead="July 2020 - Present"
-                    description={["Developing front-end features in React, such as scanable price charts and sortable investment portfolios.  Building dynamic collections of investments using Python."]}
+                    description={["Developing front-end features in React (e.g. scanable price charts, sortable investment portfolios)", "Creating back-end support for dynamic collections of investments using Python + Django"]}
                     techStack={["React", "CSS", "Python"]}
                     img={bloom}
                     link="https://apps.apple.com/us/app/bloom-stock-market-research/id1436348671"
@@ -117,9 +117,9 @@ function WorkPage(props) {
                     role="Applications Development SWE Intern"
                     subhead="Summer 2019 • Santa Clara 2020 - Present"
                     description={[
-                        "Migrated single-use-case map application built in Angular to React as reusable component useful for company-wide product development",
-                        "Integrated map into Agent Workspace product, a centralized web app for dispatch workers",
+                        "Migrated single-use-case map component from Angular to new React.js based framework to allow for company-wide adoption.",
                         "Built filtered data selection utilizing RESTful API and display of custom clustered markers on a map using Google API",
+                        "Integrated map into new Agent Workspace product that services dispatch workers customers",
 
                     ]}
                     techStack={["React", "CSS", "Angular", "REST API", "Google API"]}
