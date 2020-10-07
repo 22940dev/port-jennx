@@ -106,7 +106,7 @@ function WorkPage(props) {
                     title="Bloom: Stock Market Research App"
                     role="Software Engineering Intern"
                     subhead="July 2020 - Present"
-                    description={["Developing front-end features in React (e.g. scanable price charts, sortable investment portfolios)", "Creating back-end support for dynamic collections of investments using Python + Django"]}
+                    description={["Developing front-end features in React (e.g. scanable price charts, sortable investment portfolios)", "Developing scripts that update dynamic collections of investments stored in Django database in a daily cronjob"]}
                     techStack={["React", "CSS", "Python"]}
                     img={bloom}
                     link="https://apps.apple.com/us/app/bloom-stock-market-research/id1436348671"
@@ -162,7 +162,7 @@ function WorkPage(props) {
                     title="The Music Connection Rails Web App"
                     role="CS168 Software Engineering Client Project"
                     subhead="Fall 2019"
-                    description={["Developed Rails web app to schedule music tutoring between teachers and 75 volunteer UC Berkeley students. Utilizing test-driven-development and Agile practices to refactor legacy code"]}
+                    description={["Deployed a Rails web app through Heroku that schedules tutoring sessions for The Music Connection", "Utilized test-driven-development to refactor legacy JavaScript code utilizing Travis CI",  "Added input validation and increase form clarity to decrease number of submissions needed to automate the matching of 100+ students/teachers and volunteers"]}
                     techStack={["Rails", "Heroku", "CSS" , "Agile Development"]}
                     img={music}
                     link="https://tmc-ucberkeley.herokuapp.com/"
@@ -199,7 +199,9 @@ function WorkPage(props) {
                 <Col>
                     <p style={{fontWeight: 600}} >  Frameworks/Tech </p> 
                     <ul> 
-                        <li> React </li>
+                        <li> React.js </li>
+                        <li> Node.js </li>
+                        <li> Django </li>
                         <li> Ruby on Rails </li>
                         <li> Adobe Suite / Figma </li>
                     </ul>
@@ -228,7 +230,7 @@ function WorkPage(props) {
                     title="Social Chair"
                     role="Codeology"
                     subhead="Fall 2019 - Spring 2020"
-                    description={["Organized 2 semester retreats and 15+ social events for 70+ club member"]}
+                    description={["Organized 4 semester retreats and 25+ social events for 70+ club member"]}
                     techStack={[]}
                     img={codeo}
                     link="https://www.codeology.club/"
