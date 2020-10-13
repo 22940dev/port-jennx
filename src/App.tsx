@@ -1,14 +1,10 @@
-import React,  { FC, lazy, Suspense, ReactNode } from 'react';
+import React from 'react';
 import { BrowserRouter as Router, Route, Redirect} from 'react-router-dom';
-import logo from './logo.svg';
 import './App.css';
-import { loadParams } from './utils/native';
 import { inject as injectGlobalStyles } from './styles';
-import { render } from 'react-dom';
 import WorkPage from './components/WorkPage';
 import HomePage from './components/HomePage';
 import PlayPage from './components/PlayPage';
-import Art from "./components/Art";
 
 
 function App() {
